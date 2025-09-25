@@ -9,14 +9,20 @@ const mockImages = mockUrls.map((url, index) => ({
 export default function HomePage() {
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
+      <p className="text-blue-600 dark:text-sky-400">This text is now blue</p>
+      <div className="border-40 border-indigo-500 ..."></div>
 			  <div className="flex flex-wrap gap-4">{
       mockImages.map((image) => (
         <div key ={image.id} className="w-48">
           <img src={image.url} alt="image" />
         </div>
+          
       ))
     }
     </div>
+    <Link href="/Layer02">Secondpage</Link>
 		</main>
 	);
 }
+
+
